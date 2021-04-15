@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome to Tic Tac Toe</h1>
+    <p>Get ready to play</p>
+    <button type="button" class="btn btn-primary btn-lg" id="reset">New Game</button>
+    <button type="button" class="btn btn-success btn-lg" id="bigreset">New Tournament</button>
+
+  </div>
+
+  <table class="center">
+    <tr>
+      <td class="resizetable">X Wins: </td>
+      <td class="resizetable"id="xwin">0</td>
+    </tr>
+    <tr>
+      <td class="resizetable">O Wins: </td>
+      <td class="resizetable"id="owin">0</td>
+    </tr>
+  </table>
+<div id="gameboard">
+  <table class="center mb-4">
+    <tr>
+      <td class="resize" id="a1"></td>
+      <td class="resize" id="a2"></td>
+      <td class="resize" id="a3"></td>
+    </tr>
+    <tr>
+      <td class="resize" id="b1"></td>
+      <td class="resize" id="b2"></td>
+      <td class="resize" id="b3"></td>
+    </tr>
+    <tr>
+      <td class="resize" id="c1"></td>
+      <td class="resize" id="c2"></td>
+      <td class="resize" id="c3"></td>
+    </tr>
+  </table>
+</div>
+</div>
+{% endblock content %}
+
+{% block extra_scripts %}
+  <script src="{% static "js/tictactoe.js" %}"></script>
+{% endblock extra_scripts %}

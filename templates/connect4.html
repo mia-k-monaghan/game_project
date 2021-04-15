@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static "css/connect4.css" %}">
+{% endblock extra_head%}
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+    <h1 >Welcome to Connect Four</h1>
+    <p>Get four of your chips in a row to win!</p>
+    <button type="button" class="btn btn-primary btn-lg" id="reset">New Game</button>
+  </div>
+  <p align='center' id="turn">Enter the players to get started.</p>
+<!-- player input -->
+  <form>
+    <div class="form-group col-md-6 mx-auto">
+      <input id="p1" class="form-control" type="text" placeholder="Player 1">
+      <input id="p2" class="form-control" type="text" placeholder="Player 2">
+
+    </div>
+  </form>
+</div>
+
+<!-- board -->
+<div class="container" align='center'>
+  <table class="board">
+    <tr>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+    </tr>
+    <tr>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+    </tr>
+    <tr>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+    </tr>
+    <tr>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+    </tr>
+    <tr>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+    </tr>
+    <tr>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+      <td> <button type="button"></button></td>
+    </tr>
+
+  </table>
+</div>
+
+{% endblock content%}
+
+{% block extra_scripts %}
+  <script src="{% static "js/connect4.js" %}"></script>
+{% endblock extra_scripts %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">Game Project</h1>
+    <p>Because sometimes all you need is just a simple game.</p>
+  </div>
+<a href="{% url 'tic-tac-toe' %}"><img src="https://store-images.microsoft.com/image/apps.36794.9007199266245549.3096ca48-e91d-47a4-ba91-92f8ed173a70.0e576628-c430-46ec-b800-74526d24c133?mode=scale&q=90&h=200&w=200&background=%23000000"  alt="" class="img-thumbnail"></a>
+<a href="{% url 'connect4' %}"><img src="https://www.101computing.net/wp/wp-content/uploads/connect4.png" alt="" height="220px" width="230px" class="mx-4 img-thumbnail"></a>
+</div>
+{% endblock content%}
